@@ -1,0 +1,13 @@
+identity:
+  name: voice_list
+  author: camb-ai
+  label:
+    en_US: "List Voices"
+description:
+  human:
+    en_US: "List all available CAMB AI voices for text-to-speech"
+  llm: "Retrieve a list of all available voices from CAMB AI, including voice IDs, names, and metadata. Use this to find voice IDs for TTS tools."
+extra:
+  python:
+    source: "tools/voice_list.py"
+parameters: []

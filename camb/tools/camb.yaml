@@ -1,0 +1,33 @@
+identity:
+  author: camb-ai
+  name: camb
+  label:
+    en_US: "CAMB AI Tools"
+  description:
+    en_US: "CAMB AI audio and speech tools - translation, TTS, transcription, voice cloning, and more"
+  icon: "icon.png"
+  tags:
+    - entertainment
+credentials_for_provider:
+  api_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: "CAMB AI API Key"
+    placeholder:
+      en_US: "Enter your CAMB AI API key"
+    help:
+      en_US: "Your CAMB AI API key from https://studio.camb.ai"
+    url: "https://studio.camb.ai"
+extra:
+  python:
+    source: "tools/camb_tool_provider.py"
+tools:
+  - tools/translate.yaml
+  - tools/translated_tts.yaml
+  - tools/tts.yaml
+  - tools/transcribe.yaml
+  - tools/voice_clone.yaml
+  - tools/voice_list.yaml
+  - tools/text_to_sound.yaml
+  - tools/audio_separation.yaml

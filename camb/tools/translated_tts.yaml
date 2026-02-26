@@ -1,0 +1,50 @@
+identity:
+  name: translated_tts
+  author: camb-ai
+  label:
+    en_US: "Translated TTS"
+description:
+  human:
+    en_US: "Translate text and generate speech in the target language"
+  llm: "Translate text from one language to another and generate text-to-speech audio in the target language, all in a single step."
+extra:
+  python:
+    source: "tools/translated_tts.py"
+parameters:
+  - name: text
+    type: string
+    required: true
+    label:
+      en_US: "Text"
+    human_description:
+      en_US: "The text to translate and convert to speech"
+    llm_description: "The text to translate and synthesize as speech"
+    form: llm
+  - name: source_language
+    type: number
+    required: true
+    label:
+      en_US: "Source Language"
+    human_description:
+      en_US: "Source language code (numeric). 1=English, 2=Spanish, 3=French, 4=German, 5=Italian, 6=Portuguese, 7=Japanese, 8=Korean, 9=Chinese"
+    llm_description: "Source language numeric code. 1=English, 2=Spanish, 3=French, 4=German, 5=Italian, 6=Portuguese, 7=Japanese, 8=Korean, 9=Chinese"
+    form: llm
+  - name: target_language
+    type: number
+    required: true
+    label:
+      en_US: "Target Language"
+    human_description:
+      en_US: "Target language code (numeric). 1=English, 2=Spanish, 3=French, 4=German, 5=Italian, 6=Portuguese, 7=Japanese, 8=Korean, 9=Chinese"
+    llm_description: "Target language numeric code. 1=English, 2=Spanish, 3=French, 4=German, 5=Italian, 6=Portuguese, 7=Japanese, 8=Korean, 9=Chinese"
+    form: llm
+  - name: voice_id
+    type: number
+    required: false
+    default: 147320
+    label:
+      en_US: "Voice ID"
+    human_description:
+      en_US: "The voice ID to use for speech synthesis. Use the Voice List tool to see available voices."
+    llm_description: "Numeric voice ID for speech synthesis. Default is 1."
+    form: llm

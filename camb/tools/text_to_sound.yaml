@@ -1,0 +1,22 @@
+identity:
+  name: text_to_sound
+  author: camb-ai
+  label:
+    en_US: "Text to Sound"
+description:
+  human:
+    en_US: "Generate sound effects or ambient audio from a text description"
+  llm: "Generate a sound effect or ambient audio from a text prompt description. For example, 'rain on a tin roof' or 'crowd cheering in a stadium'."
+extra:
+  python:
+    source: "tools/text_to_sound.py"
+parameters:
+  - name: prompt
+    type: string
+    required: true
+    label:
+      en_US: "Prompt"
+    human_description:
+      en_US: "A text description of the sound to generate (e.g., 'thunder and rain', 'birds chirping in a forest')"
+    llm_description: "A text description of the sound to generate. Be descriptive for best results."
+    form: llm

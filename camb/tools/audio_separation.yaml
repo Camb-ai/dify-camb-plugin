@@ -1,0 +1,22 @@
+identity:
+  name: audio_separation
+  author: camb-ai
+  label:
+    en_US: "Audio Separation"
+description:
+  human:
+    en_US: "Separate vocals from background audio in a media file"
+  llm: "Separate an audio or video file into vocal (foreground) and instrumental/background tracks. Returns URLs for both the foreground and background audio."
+extra:
+  python:
+    source: "tools/audio_separation.py"
+parameters:
+  - name: audio_file_url
+    type: string
+    required: true
+    label:
+      en_US: "Audio File URL"
+    human_description:
+      en_US: "URL of the audio or video file to separate"
+    llm_description: "The URL of the audio or video file to perform source separation on"
+    form: llm

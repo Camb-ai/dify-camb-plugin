@@ -1,0 +1,33 @@
+version: 0.0.1
+type: plugin
+author: "camb-ai"
+name: "camb"
+label:
+  en_US: "CAMB AI"
+description:
+  en_US: "CAMB AI audio and speech tools - TTS, translation, transcription, and more"
+icon: "icon.png"
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    model:
+      enabled: false
+    endpoint:
+      enabled: false
+    storage:
+      enabled: false
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "0.0.1"
+    entrypoint: "main"
+created_at: "2026-01-01T00:00:00Z"
+plugins:
+  tools:
+    - "tools/camb.yaml"

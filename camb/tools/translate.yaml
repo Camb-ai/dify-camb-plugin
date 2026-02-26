@@ -1,0 +1,40 @@
+identity:
+  name: translate
+  author: camb-ai
+  label:
+    en_US: "Translate Text"
+description:
+  human:
+    en_US: "Translate text between languages using CAMB AI"
+  llm: "Translate text from one language to another using CAMB AI's translation engine. Supports a wide range of languages."
+extra:
+  python:
+    source: "tools/translate.py"
+parameters:
+  - name: text
+    type: string
+    required: true
+    label:
+      en_US: "Text"
+    human_description:
+      en_US: "The text to translate"
+    llm_description: "The text to translate to the target language"
+    form: llm
+  - name: source_language
+    type: number
+    required: true
+    label:
+      en_US: "Source Language"
+    human_description:
+      en_US: "Source language code (numeric). 1=English, 2=Spanish, 3=French, 4=German, 5=Italian, 6=Portuguese, 7=Japanese, 8=Korean, 9=Chinese, 10=Arabic, 11=Hindi, 14=Russian"
+    llm_description: "Source language numeric code. Common codes: 1=English, 2=Spanish, 3=French, 4=German, 5=Italian, 6=Portuguese, 7=Japanese, 8=Korean, 9=Chinese, 10=Arabic, 11=Hindi, 14=Russian"
+    form: llm
+  - name: target_language
+    type: number
+    required: true
+    label:
+      en_US: "Target Language"
+    human_description:
+      en_US: "Target language code (numeric). 1=English, 2=Spanish, 3=French, 4=German, 5=Italian, 6=Portuguese, 7=Japanese, 8=Korean, 9=Chinese, 10=Arabic, 11=Hindi, 14=Russian"
+    llm_description: "Target language numeric code. Common codes: 1=English, 2=Spanish, 3=French, 4=German, 5=Italian, 6=Portuguese, 7=Japanese, 8=Korean, 9=Chinese, 10=Arabic, 11=Hindi, 14=Russian"
+    form: llm

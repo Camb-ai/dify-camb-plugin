@@ -1,0 +1,32 @@
+identity:
+  name: transcribe
+  author: camb-ai
+  label:
+    en_US: "Transcribe Audio"
+description:
+  human:
+    en_US: "Transcribe speech from an audio file to text using CAMB AI"
+  llm: "Transcribe speech from an audio or video file URL to text using CAMB AI's transcription engine."
+extra:
+  python:
+    source: "tools/transcribe.py"
+parameters:
+  - name: audio_file_url
+    type: string
+    required: true
+    label:
+      en_US: "Audio File URL"
+    human_description:
+      en_US: "URL of the audio or video file to transcribe"
+    llm_description: "The URL of the audio or video file to transcribe to text"
+    form: llm
+  - name: language
+    type: number
+    required: false
+    default: 1
+    label:
+      en_US: "Language"
+    human_description:
+      en_US: "Language code (numeric). 1=English, 2=Spanish, 3=French, 4=German, 7=Japanese, 9=Chinese"
+    llm_description: "Source language numeric code. 1=English, 2=Spanish, 3=French, 4=German, 5=Italian, 6=Portuguese, 7=Japanese, 8=Korean, 9=Chinese"
+    form: llm

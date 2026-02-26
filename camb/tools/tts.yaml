@@ -1,0 +1,62 @@
+identity:
+  name: tts
+  author: camb-ai
+  label:
+    en_US: "Text to Speech"
+description:
+  human:
+    en_US: "Convert text to speech audio using CAMB AI TTS"
+  llm: "Convert text to speech audio using CAMB AI's TTS engine. Supports multiple voices and languages."
+extra:
+  python:
+    source: "tools/tts.py"
+parameters:
+  - name: text
+    type: string
+    required: true
+    label:
+      en_US: "Text"
+    human_description:
+      en_US: "The text to convert to speech"
+    llm_description: "The text to synthesize as speech audio"
+    form: llm
+  - name: voice_id
+    type: number
+    required: false
+    default: 147320
+    label:
+      en_US: "Voice ID"
+    human_description:
+      en_US: "The voice ID to use. Use the Voice List tool to see available voices."
+    llm_description: "Numeric voice ID for speech synthesis. Use the voice_list tool to find available voices."
+    form: llm
+  - name: language
+    type: string
+    required: false
+    default: "en-us"
+    label:
+      en_US: "Language"
+    human_description:
+      en_US: "BCP-47 language code (e.g. en-us, es-es, fr-fr, de-de, ja-jp, zh-cn)"
+    llm_description: "BCP-47 language code. Common codes: en-us, es-es, fr-fr, de-de, it-it, pt-br, ja-jp, ko-kr, zh-cn, ar-sa, hi-in, ru-ru"
+    form: llm
+  - name: speech_model
+    type: select
+    required: false
+    default: "mars-flash"
+    label:
+      en_US: "Speech Model"
+    human_description:
+      en_US: "The TTS model to use"
+    llm_description: "The TTS model to use. mars-flash is fastest, mars-pro is highest quality, mars-instruct supports style instructions."
+    form: llm
+    options:
+      - value: "mars-flash"
+        label:
+          en_US: "MARS Flash (fastest)"
+      - value: "mars-pro"
+        label:
+          en_US: "MARS Pro (highest quality)"
+      - value: "mars-instruct"
+        label:
+          en_US: "MARS Instruct (style control)"

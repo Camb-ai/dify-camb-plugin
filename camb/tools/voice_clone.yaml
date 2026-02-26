@@ -1,0 +1,47 @@
+identity:
+  name: voice_clone
+  author: camb-ai
+  label:
+    en_US: "Clone Voice"
+description:
+  human:
+    en_US: "Clone a voice from an audio sample to create a custom voice"
+  llm: "Clone a voice from an audio file to create a reusable custom voice for text-to-speech. Returns the new voice ID."
+extra:
+  python:
+    source: "tools/voice_clone.py"
+parameters:
+  - name: voice_name
+    type: string
+    required: true
+    label:
+      en_US: "Voice Name"
+    human_description:
+      en_US: "A name for the cloned voice"
+    llm_description: "A descriptive name for the new cloned voice"
+    form: llm
+  - name: gender
+    type: select
+    required: true
+    label:
+      en_US: "Gender"
+    human_description:
+      en_US: "The gender of the voice"
+    llm_description: "The gender of the voice being cloned"
+    form: llm
+    options:
+      - value: male
+        label:
+          en_US: "Male"
+      - value: female
+        label:
+          en_US: "Female"
+  - name: audio_file_url
+    type: string
+    required: true
+    label:
+      en_US: "Audio File URL"
+    human_description:
+      en_US: "URL of the audio file to clone the voice from"
+    llm_description: "The URL of the audio file containing the voice to clone"
+    form: llm
