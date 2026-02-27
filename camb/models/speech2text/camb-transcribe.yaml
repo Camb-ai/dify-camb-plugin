@@ -1,0 +1,14 @@
+model: camb-transcribe
+model_type: speech2text
+label:
+  en_US: "CAMB Transcribe"
+model_properties:
+  file_upload_limit: 25
+  supported_file_extensions:
+    - "mp3"
+    - "wav"
+    - "mp4"
+    - "m4a"
+    - "ogg"
+    - "flac"
+    - "webm"

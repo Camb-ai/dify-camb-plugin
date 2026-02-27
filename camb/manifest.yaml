@@ -18,6 +18,7 @@ resource:
       enabled: false
     storage:
       enabled: false
+      size: 1048576
 meta:
   version: 0.0.1
   arch:

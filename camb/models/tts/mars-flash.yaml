@@ -1,0 +1,9 @@
+model: mars-flash
+model_type: tts
+label:
+  en_US: "MARS Flash"
+model_properties:
+  default_voice: "147320"
+  word_limit: 3000
+  audio_type: "wav"
+  max_workers: 1

@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.difypkg
+dify-plugin-darwin-*
+dify-plugin-linux-*
+dify-plugin-windows-*
